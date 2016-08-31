@@ -6,7 +6,9 @@ public class Hej5Sound {
 
             public static void main (String[] arg) {
 
-                          JOptionPane.showMessageDialog(null, "Hej!\n" + "Number of processors: " + Runtime.getRuntime().availableProcessors() + "\n" + "Free memory:" + Runtime.getRuntime().freeMemory());
+                          JOptionPane.showMessageDialog(null, "Hej!\n" + "Number of processors: " + Runtime.getRuntime().availableProcessors() +
+							"\n" + "Free memory:" + Runtime.getRuntime().freeMemory());
+			  /*Loop to sound 5 times*/ 
                          for(int i=0; i<5;i++){
 			     Toolkit.getDefaultToolkit().beep();
 			     try {
