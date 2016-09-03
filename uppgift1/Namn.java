@@ -1,21 +1,27 @@
+package repchar;
+
 import javax.swing.JOptionPane;
 
 public class Namn {
 
 	public static void main(String[] args) {
-		//Deklarera variabler
-		String namn,fornamn, efternamn;
+		
+		String namn;
+		String fornamn, efternamn;
 		namn = JOptionPane.showInputDialog("Ange ditt för och efternamn!:");
-		/*Denna kodrad tar bort whitespace runt strängen. Gör alla rader till små bokstäver
-		och gör om ä, å och ö till a och o*/
+		/*This line of code trims of trailing and leading whitespace. Makes all chars to lower case
+		 and replaces 'å' 'ä' and 'ö' to a or o*/
 		namn=namn.toLowerCase().trim().replaceAll("å","a").replaceAll("ä","a").replaceAll("ö","o");
-		int findex = namn.indexOf(' ') + 1;
-		int i =namn.lastIndexOf(' ');
-		fornamn=namn.substring(0,i);
-		int k =namn.length();
-		efternamn=namn.substring(findex, k);
-		//Skriv ut reslultatet på mailform
+		//Index för förnamnet
+		int findex = namn.indexOf(' ');
+		//Index föe efternamnet
+		int lindex =namn.indexOf(' ')+1;
+		//Plocka ut sista indexet
+		int lastindex =namn.length();
+		//Plocka ut förnamnet
+		fornamn=namn.substring(0,findex);
+		//Plocka ut efternamn
+		efternamn=namn.substring(lindex, lastindex);
 		JOptionPane.showMessageDialog(null,"Din mailadress:\n"+fornamn+"."+efternamn+"@nackademin.se");
 	}
-
 }
