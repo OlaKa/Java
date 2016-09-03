@@ -1,16 +1,13 @@
-package repchar;
-
 import javax.swing.JOptionPane;
 
 public class Namn {
 
 	public static void main(String[] args) {
 		
-		String namn;
-		String fornamn, efternamn;
+		String namn, fornamn, efternamn;
 		namn = JOptionPane.showInputDialog("Ange ditt för och efternamn!:");
-		/*This line of code trims of trailing and leading whitespace. Makes all chars to lower case
-		 and replaces 'å' 'ä' and 'ö' to a or o*/
+		/*toLowercase ger bara gemener, trim tar bort onödig whitespace och replaceAll tar bort
+		 å, ä och ö och ersätter med a och o.*/
 		namn=namn.toLowerCase().trim().replaceAll("å","a").replaceAll("ä","a").replaceAll("ö","o");
 		//Index för förnamnet
 		int findex = namn.indexOf(' ');
