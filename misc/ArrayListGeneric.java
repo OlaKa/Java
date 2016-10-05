@@ -32,6 +32,6 @@ public class Genarr {
       printArray(doubleArray);   // pass a Double array
 
       System.out.println("\nArray stringArray contains:");
-      printArray(stringArray);   // pass a Character array
+      printArray(stringArray);   // pass a String array
     }
 }   
