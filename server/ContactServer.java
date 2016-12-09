@@ -30,7 +30,7 @@ public class ContactServer implements Runnable {
             }
             clientSocket.close();
         } catch (Exception e) {
-            System.out.println("Contact Server got an Exception" + e.getStackTrace());
+            System.out.println("Contact Server got an Exception");
         }
     }
 
