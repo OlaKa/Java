@@ -17,7 +17,7 @@ public class Main {
                 new Thread(new ContactServer(clientSocket)).start();
             }
         } catch (IOException e) {
-            System.err.println("Contact Server got an IOException" + e.getStackTrace());
+            System.err.println("Contact Server got an IOException");
         }
     }
 }
