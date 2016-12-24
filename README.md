@@ -1,1 +1,1 @@
-# Java
+# Miscellaneous Java projects 
